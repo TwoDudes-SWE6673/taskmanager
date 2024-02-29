@@ -1,2 +1,105 @@
-package org.swe6673.task;public class Task {
+package org.swe6673.task;
+
+import java.time.LocalDate;
+
+public class Task implements Comparable<Task> {
+    private String taskName;
+    private LocalDate due_date;
+    private Boolean isCompleted;
+
+
+    public Task(String taskName,  Boolean isCompleted) {
+        this.taskName = taskName;
+        this.isCompleted = isCompleted;
+        this.due_date = LocalDate.now();
+    }
+
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public LocalDate getDue_date() {
+        return due_date;
+    }
+
+    public void setDue_date(LocalDate due_date) {
+        this.due_date = due_date;
+    }
+
+    public Boolean getCompleted() {
+        return isCompleted;
+    }
+
+    public void setCompleted(Boolean completed) {
+        isCompleted = completed;
+    }
+
+    public void setCompleted(boolean isCompleted) {
+        this.isCompleted = isCompleted;
+    }
+    public boolean isOverdue() {
+        return LocalDate.now().isAfter(due_date);
+    }
+
+
+
+    public String getName() {
+        return taskName;
+    }
+
+    public boolean isCompleted() {
+        return false;
+    }
+    public LocalDate getDueDate() {
+        return due_date;
+    }
+    public void setDueDate(LocalDate dueDate) {
+        this.due_date = dueDate;
+    }
+
+    public void completeTask() {
+    }
+
+    public void printTaskDetails() {
+        System.out.println("Task Name: " + taskName);
+        System.out.println("Due Date: " + due_date);
+    }
+    public void markAsCompleted() {
+        this.isCompleted = true;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
+    @Override
+    public int compareTo(Task o) {
+        return this.taskName.compareTo(o.getName());
+    }
+
+
+    public void updateTask(String newTaskName, LocalDate newDueDate, boolean newIsCompleted) {
+        this.taskName = newTaskName;
+        this.due_date = newDueDate;
+        this.isCompleted = newIsCompleted;
+    }
+
+    public void updateTaskName(String newTaskName) {
+        this.taskName = newTaskName;
+    }
+
+    public void printTaskStatus() {
+        System.out.println("Task Name: " + taskName);
+        System.out.println("Completed: " + isCompleted);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "taskName='" + taskName + '\'' +
+                ", due_date=" + due_date +
+                ", isCompleted=" + isCompleted +
+                '}';
+    }
 }
