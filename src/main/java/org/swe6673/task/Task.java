@@ -1,17 +1,22 @@
 package org.swe6673.task;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Task implements Comparable<Task> {
     private String taskName;
     private LocalDate due_date;
     private Boolean isCompleted;
+    private List<String> usersInvolved;
+    private List<String> comments;
 
-
-    public Task(String taskName,  Boolean isCompleted) {
+    public Task(String taskName, LocalDate approachingDeadline, Boolean isCompleted) {
         this.taskName = taskName;
         this.isCompleted = isCompleted;
         this.due_date = LocalDate.now();
+        this.usersInvolved = new ArrayList<>();
+        this.comments = new ArrayList<>();
     }
 
     public String getTaskName() {
@@ -101,5 +106,21 @@ public class Task implements Comparable<Task> {
                 ", due_date=" + due_date +
                 ", isCompleted=" + isCompleted +
                 '}';
+    }
+
+    public void setUsersInvolved(List<String> usersInvolved) {
+        this.usersInvolved = usersInvolved;
+    }
+
+    public void addComment(String comment) {
+        comments.add(comment);
+    }
+
+    public List<String> getUsersInvolved() {
+        return usersInvolved;
+    }
+
+    public List<String> getComments() {
+        return comments;
     }
 }

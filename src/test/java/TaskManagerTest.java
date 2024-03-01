@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.swe6673.task.Task;
 import org.swe6673.taskmanager.TaskManager;
+
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,8 +35,9 @@ public class TaskManagerTest {
     @Test
     @DisplayName("checks to verify the amount of tasks in manager if added")
     void taskManagerContainsNumberOfTasksAdded() {
-        Task task1 = new Task("Berevenditto",false);
-        Task task2 = new Task("Berevenditto",false);
+        LocalDate approachingDeadline = null;
+        Task task1 = new Task("Berevenditto", approachingDeadline, false);
+        Task task2 = new Task("Berevenditto", approachingDeadline, false);
         taskManager.addTask(task1);
         taskManager.addTask(task2);
         List<Task> tasks = taskManager.tasks();
@@ -45,7 +48,8 @@ public class TaskManagerTest {
     @DisplayName("create a new task")
     public void testAddTask() {
         // Test adding a new task
-        Task task = new Task("Task 1",false);
+        LocalDate approachingDeadline = null;
+        Task task = new Task("Task 1", approachingDeadline, false);
         taskManager.addTask(task);
         List<Task> tasks = taskManager.tasks();
         assertEquals(1, tasks.size(), () -> "Task Manager should contain 1 task.");
@@ -57,7 +61,8 @@ public class TaskManagerTest {
     public void testUpdateTask() {
         // Test updating a task
         TaskManager taskManager = new TaskManager();
-        Task task = new Task("Task 1",false);
+        LocalDate approachingDeadline = null;
+        Task task = new Task("Task 1", approachingDeadline, false);
         taskManager.addTask(task);
         taskManager.updateTask(task, "Updated Task 1");
         List<Task> tasks = taskManager.tasks();
@@ -70,7 +75,8 @@ public class TaskManagerTest {
     public void testMarkTaskAsCompleted() {
         // Test marking a task as complete
 
-        Task task = new Task("Task 1",false);
+        LocalDate approachingDeadline = null;
+        Task task = new Task("Task 1", approachingDeadline, false);
         taskManager.addTask(task);
         taskManager.markTaskAsCompleted(task);
         List<Task> tasks = taskManager.tasks();
@@ -82,8 +88,9 @@ public class TaskManagerTest {
     @DisplayName("get all completed tasks")
     public void testGetAllCompletedTasks() {
 
-        Task task1 = new Task("Task 1",false);
-        Task task2 = new Task("Task 2",false);
+        LocalDate approachingDeadline = null;
+        Task task1 = new Task("Task 1", approachingDeadline, false);
+        Task task2 = new Task("Task 2", approachingDeadline, false);
         taskManager.addTask(task1);
         taskManager.addTask(task2);
         taskManager.markTaskAsCompleted(task1);
@@ -97,8 +104,9 @@ public class TaskManagerTest {
     @DisplayName("get all tasks")
     public void testGetAllTasks() {
 
-        Task task1 = new Task("Task 1", false);
-        Task task2 = new Task("Task 2", false);
+        LocalDate approachingDeadline = null;
+        Task task1 = new Task("Task 1", approachingDeadline, false);
+        Task task2 = new Task("Task 2", approachingDeadline, false);
         taskManager.addTask(task1);
         taskManager.addTask(task2);
         List<Task> tasks = taskManager.tasks();
@@ -110,7 +118,8 @@ public class TaskManagerTest {
     @Test
     public void testDeleteTask() {
         // Test deleting a task
-        Task task = new Task("Task 1", false);
+        LocalDate approachingDeadline = null;
+        Task task = new Task("Task 1", approachingDeadline, false);
         taskManager.addTask(task);
         taskManager.deleteTask(task);
         List<Task> tasks = taskManager.tasks();
@@ -121,8 +130,9 @@ public class TaskManagerTest {
     @DisplayName("get all incomplete tasks")
     public void testGetAllIncompleteTasks() {
 
-        Task task1 = new Task("Task 1",true);
-        Task task2 = new Task("Task 2",false);
+        LocalDate approachingDeadline = null;
+        Task task1 = new Task("Task 1", approachingDeadline, true);
+        Task task2 = new Task("Task 2", approachingDeadline, false);
         taskManager.addTask(task1);
         taskManager.addTask(task2);
         taskManager.markTaskAsCompleted(task1);
@@ -136,7 +146,8 @@ public class TaskManagerTest {
     @DisplayName("if add is called without parameters return empty List")
     public void emptyTaskManagerWhenAddIsCalledWithoutTasks() {
 
-        Task task = new Task("Task 1",false);
+        LocalDate approachingDeadline = null;
+        Task task = new Task("Task 1", approachingDeadline, false);
         taskManager.addTask();
         List<Task> tasks = taskManager.tasks();
         assertTrue(tasks.isEmpty(), () -> "Task manager should be empty.");
@@ -146,11 +157,12 @@ public class TaskManagerTest {
     @Test
     @DisplayName("ensure task is immutable for client")
     void tasksIsImmutableForClient() {
-        Task task1 = new Task("Round One Lifting",false);
+        LocalDate approachingDeadline = null;
+        Task task1 = new Task("Round One Lifting", approachingDeadline, false);
         taskManager.addTask(task1);
         List<Task> tasks = taskManager.tasks();
         try {
-            tasks.add(new Task("Jumping Jacks", false));
+            tasks.add(new Task("Jumping Jacks", approachingDeadline, false));
             fail(() -> "Should not be able to add tasks to Manager");
         } catch (Exception e) {
             assertTrue(e instanceof UnsupportedOperationException, () -> "Should throw UnsupportedOperationException.");
@@ -160,7 +172,8 @@ public class TaskManagerTest {
     @Test
     @DisplayName("arrange task by title")
     void ManagerArrangedByTitle() {
-        taskManager.addTask(new Task("One",false),new Task("Two", false), new Task("Five",false));
+        LocalDate approachingDeadline = null;
+        taskManager.addTask(new Task("One", approachingDeadline, false),new Task("Two", approachingDeadline, false), new Task("Five", approachingDeadline, false));
         System.out.println(taskManager.toString());
         List<Task> tasks = taskManager.arrange();
         assertEquals(Arrays.asList(tasks.get(0),tasks.get(1),tasks.get(2)), tasks, () -> "Tasks in a manager should be arranged alphabetically by  title");

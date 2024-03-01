@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92712cd4-5a64-43ae-8f9a-6ce1d9ef295f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/db/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserDbTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/swe6673/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/swe6673/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/swe6673/taskmanager/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/taskmanager/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/swe6673/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TaskManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,38 +56,109 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.TaskCreationTest.executor": "Run",
-    "Gradle.TaskCreationTest.taskManagerEmpty.executor": "Run",
-    "Gradle.TaskManagerTest.ManagerArrangedByTitle.executor": "Run",
-    "Gradle.TaskManagerTest.emptyTaskManagerWhenAddIsCalledWithoutTasks.executor": "Run",
-    "Gradle.TaskManagerTest.executor": "Run",
-    "Gradle.TaskManagerTest.taskManagerContainsNumberOfTasksAdded.executor": "Run",
-    "Gradle.TaskManagerTest.tasksIsImmutableForClient.executor": "Run",
-    "Gradle.TaskManagerTest.testAddTask.executor": "Run",
-    "Gradle.TaskManagerTest.testGetAllCompletedTasks.executor": "Run",
-    "Gradle.TaskManagerTest.testGetAllTasks.executor": "Run",
-    "Gradle.TaskManagerTest.testUpdateTask.executor": "Run",
-    "Gradle.UserDbTest.executor": "Run",
-    "Gradle.taskmanager [:Main.main()].executor": "Run",
-    "Gradle.taskmanager.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.TaskCreationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskCreationTest.taskManagerEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.ManagerArrangedByTitle.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.emptyTaskManagerWhenAddIsCalledWithoutTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.taskManagerContainsNumberOfTasksAdded.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.tasksIsImmutableForClient.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.testAddTask.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.testGetAllCompletedTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.testGetAllTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.testUpdateTask.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserDbTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.taskmanager [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.taskmanager.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chris/Desktop/Software Testing Verification/Assignment2/Assignment2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Gradle.NotificationTest">
+    <configuration name="CommentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CommentTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;LoginTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="NotificationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;NotificationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="TaskManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -115,10 +180,9 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaskManagerTest.ManagerArrangedByTitle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserDbTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -131,7 +195,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TaskManagerTest.ManagerArrangedByTitle&quot;" />
+            <option value="&quot;UserDbTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -139,88 +203,15 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TaskManagerTest.emptyTaskManagerWhenAddIsCalledWithoutTasks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TaskManagerTest.emptyTaskManagerWhenAddIsCalledWithoutTasks&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TaskManagerTest.tasksIsImmutableForClient" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TaskManagerTest.tasksIsImmutableForClient&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TaskManagerTest.testUpdateTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TaskManagerTest.testUpdateTask&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TaskManagerTest.ManagerArrangedByTitle" />
+        <item itemvalue="Gradle.NotificationTest" />
+        <item itemvalue="Gradle.LoginTest" />
+        <item itemvalue="Gradle.CommentTest" />
+        <item itemvalue="Gradle.UserDbTest" />
         <item itemvalue="Gradle.TaskManagerTest" />
-        <item itemvalue="Gradle.TaskManagerTest.tasksIsImmutableForClient" />
-        <item itemvalue="Gradle.TaskManagerTest.emptyTaskManagerWhenAddIsCalledWithoutTasks" />
-        <item itemvalue="Gradle.TaskManagerTest.testUpdateTask" />
       </list>
     </recent_temporary>
   </component>
