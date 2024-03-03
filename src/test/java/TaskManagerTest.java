@@ -57,6 +57,36 @@ public class TaskManagerTest {
     }
 
     @Test
+    void testAddNullTask() {
+        assertThrows(IllegalArgumentException.class, () -> taskManager.addTask(null),
+                "Adding a null task should throw IllegalArgumentException.");
+    }
+
+    @Test
+    @DisplayName("get all overdue tasks")
+    public void testGetAllOverdueTasks() {
+        LocalDate approachingDeadline = LocalDate.now().minusDays(1);
+        Task task1 = new Task("Task 1", approachingDeadline, false);
+        Task task2 = new Task("Task 2", approachingDeadline, false);
+        taskManager.addTask(task1);
+        taskManager.addTask(task2);
+        List<Task> overdueTasks = taskManager.getOverdueTasks();
+        assertEquals(2, overdueTasks.size(), () -> "Task Manager should contain 2 overdue tasks.");
+    }
+
+    @Test
+    @DisplayName("get task by name")
+    public void testGetTaskByName() {
+        LocalDate approachingDeadline = LocalDate.now();
+        Task task1 = new Task("Task 1", approachingDeadline, false);
+        Task task2 = new Task("Task 2", approachingDeadline, false);
+        taskManager.addTask(task1);
+        taskManager.addTask(task2);
+        Task foundTask = taskManager.getTaskByName("Task 1");
+        assertEquals(task1, foundTask, () -> "Task Manager should return the task with the specified name.");
+    }
+
+    @Test
     @DisplayName("update an existing task")
     public void testUpdateTask() {
         // Test updating a task

@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92712cd4-5a64-43ae-8f9a-6ce1d9ef295f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/db/init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/swe6673/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/task/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/swe6673/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/swe6673/taskmanager/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/taskmanager/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/swe6673/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swe6673/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TaskManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserDbTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserDbTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +50,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -58,6 +63,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.CommentTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotificationTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TaskCreationTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TaskCreationTest.taskManagerEmpty.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TaskManagerTest.ManagerArrangedByTitle.executor&quot;: &quot;Run&quot;,
@@ -67,9 +74,16 @@
     &quot;Gradle.TaskManagerTest.tasksIsImmutableForClient.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TaskManagerTest.testAddTask.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TaskManagerTest.testGetAllCompletedTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.testGetAllOverdueTasks.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TaskManagerTest.testGetAllTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskManagerTest.testGetTaskByName.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TaskManagerTest.testUpdateTask.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserDbTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserDbTest.addExistingUser.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserDbTest.deleteUser.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.UserDbTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserDbTest.testUserExists.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserDbTest.testUserRegistration.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.taskmanager [:Main.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.taskmanager.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -89,8 +103,8 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.NotificationTest">
-    <configuration name="CommentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TaskManagerTest.testGetTaskByName">
+    <configuration name="TaskManagerTest.testGetAllOverdueTasks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -103,7 +117,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CommentTest&quot;" />
+            <option value="&quot;TaskManagerTest.testGetAllOverdueTasks&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -111,9 +125,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TaskManagerTest.testGetTaskByName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -126,7 +141,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;LoginTest&quot;" />
+            <option value="&quot;TaskManagerTest.testGetTaskByName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -134,9 +149,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="NotificationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserDbTest.addExistingUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -149,7 +165,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;NotificationTest&quot;" />
+            <option value="&quot;UserDbTest.addExistingUser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -157,9 +173,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaskManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserDbTest.testUserExists" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -172,7 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TaskManagerTest&quot;" />
+            <option value="&quot;UserDbTest.testUserExists&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,9 +197,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserDbTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserDbTest.testUserRegistration" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,7 +213,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;UserDbTest&quot;" />
+            <option value="&quot;UserDbTest.testUserRegistration&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,15 +221,16 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.NotificationTest" />
-        <item itemvalue="Gradle.LoginTest" />
-        <item itemvalue="Gradle.CommentTest" />
-        <item itemvalue="Gradle.UserDbTest" />
-        <item itemvalue="Gradle.TaskManagerTest" />
+        <item itemvalue="Gradle.TaskManagerTest.testGetTaskByName" />
+        <item itemvalue="Gradle.TaskManagerTest.testGetAllOverdueTasks" />
+        <item itemvalue="Gradle.UserDbTest.addExistingUser" />
+        <item itemvalue="Gradle.UserDbTest.testUserRegistration" />
+        <item itemvalue="Gradle.UserDbTest.testUserExists" />
       </list>
     </recent_temporary>
   </component>

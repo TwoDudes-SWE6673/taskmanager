@@ -46,7 +46,6 @@ public class LoginTest {
         String password = "1234";
 
         boolean isAuthenticated = authenticate(username, password);
-
         assertFalse(isAuthenticated, "Authentication succeeded with incorrect credentials");
     }
 }

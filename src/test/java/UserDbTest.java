@@ -1,14 +1,13 @@
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.swe6673.user.User;
-
-import javax.naming.InvalidNameException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UserDbTest {
 
@@ -46,43 +45,69 @@ public class UserDbTest {
 
     @Test
     public void testUserRegistration() throws Exception {
+        //Create new user
         User user = new User("test", "testPassword", "testUser@gmail.com");
 
-        // Assume a method in User class that registers a user
-        User.register("test", "testPassword", "testUser@gmail.com");
-        // Verify the user was inserted into the database
-        assertTrue(User.exists("test"));
+        //check if client is registered and assign value
+        boolean isregistered = User.register(user.getUsername(), user.getPassword(), user.getEmail());
+
+        assertFalse(isregistered);
     }
-
-
-
 
     @Test
-    public void testGetUserById() {
+    void testUsernameIsLowercase() {
+        // Given a username that includes uppercase letters
+        String upperCasedUsername = "testUser";
+        User user = new User(upperCasedUsername, "password", "testUser@example.com");
 
+        // Then the username should be converted to lowercase
+        String username = user.getUsername();
+        assertEquals(username.toLowerCase(), username);
     }
-
 
     @Test
     public void testGetUserByName() {
+        User user = new User("test", "testPassword", "testUser@gmail.com");
+        User.register(user.getUsername(), user.getPassword(), user.getEmail());
+        String username = user.getUsername();
+        assertEquals("test", username);
     }
-
 
 
     @Test
     public void deleteUser() {
-
-    }
-
-    @Test
-    public void connectToDatabase() {
-
+        User user = new User("test", "testPassword", "testUser@gmail.com");
+        User.register(user.getUsername(), user.getPassword(), user.getEmail());
+        User.deleteUser(user.getUsername());
+        boolean existsAfterDelete = User.exists(user.getUsername());
+        assertFalse(existsAfterDelete);
     }
 
     @Test
     public void addExistingUser() {
-
+        User user = new User("test", "testPassword", "testUser@gmail.com");
+        boolean isRegistered = User.register(user.getUsername(), user.getPassword(), user.getEmail());
+        assertFalse(isRegistered);
     }
+
+    @Test
+    public void testUserLogin() throws Exception {
+        User user = new User("test", "testPassword", "testUser@gmail.com");
+        User.register(user.getUsername(), user.getPassword(), user.getEmail());
+        boolean loginSuccess = User.login(user.getUsername(), user.getPassword());
+        assertTrue(loginSuccess);
+    }
+
+
+    @Test
+    public void testUserExists() {
+        User user = new User("test", "testPassword", "testUser@gmail.com");
+        User.register(user.getUsername(), user.getPassword(), user.getEmail());
+        boolean exists = User.exists(user.getUsername());
+        assertTrue(exists);
+    }
+
+
 
 }
 

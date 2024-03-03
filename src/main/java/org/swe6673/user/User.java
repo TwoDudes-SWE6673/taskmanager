@@ -1,8 +1,5 @@
 package org.swe6673.user;
 
-
-import java.sql.Connection;
-
 public class User {
     private String username;
     private String password;
@@ -19,16 +16,22 @@ public class User {
         return true;
     }
 
+    public static boolean validateEmail(String email) {
+        return true;
+    }
+
+    public static boolean validateUsername(String username) {
+        return true;
+    }
 
 
     public static boolean register(String username, String password, String email) {
-        // Check if user exists
+
+        //Check if user is present in DB
         if (exists(username)){
-            return false;
+            return true;
         }
-        // encrypt password
-        // Save user to database
-        return true; // Return true if registration is successful
+        return false; // Return true if registration is successful
     }
 
     public static boolean login(String username, String password) {
@@ -41,6 +44,9 @@ public class User {
         return true;
     }
 
+    public static void deleteUser(String username) {
+
+    }
 
     public String getUsername() {
         return username;
